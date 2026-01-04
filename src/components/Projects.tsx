@@ -5,7 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import project1 from "@/assets/project-1.png";
 import project2 from "@/assets/project-2.png";
-import project3 from "@/assets/project-3.png";
+import project3 from "@/assets/project-3.png";      
 import project4 from "@/assets/project-4.jpg";
 import { Domain } from "node:domain";
 
@@ -30,6 +30,7 @@ export const Projects = () => {
     {
       title: "RiskAssess -Security & Risk Management",
       description: "Identifies potential security threats and proactively mitigates attacks through continuous monitoring, analysis, and preventive controls",
+      image: project3,
       technologies: ["Python", "TensorFlow", "OWASP", "IDS / IPS"],
       liveUrl: "",
       githubUrl: "https://github.com/pavanR1407/Risk--Asess",
