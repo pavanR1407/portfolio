@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+    COLOR VARIABLES
+================================ */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
+    --primary: 220 70% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 40% 92%;
+    --secondary-foreground: 220 70% 25%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 10 85% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 10 85% 65%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-start: 10 85% 65%;
+    --gradient-mid: 15 80% 60%;
+    --gradient-end: 180 60% 55%;
+
+    /* Teal */
+    --teal: 180 60% 55%;
+    --teal-foreground: 0 0% 100%;
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 180 60% 55%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 220 15% 95%;
+
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 10 85% 65%;
+    --accent-foreground: 220 25% 8%;
+
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 10 85% 65%;
+
+    --gradient-start: 10 85% 65%;
+    --gradient-mid: 15 80% 60%;
+    --gradient-end: 180 60% 55%;
+
+    --teal: 180 60% 55%;
+    --teal-foreground: 220 25% 8%;
+  }
+}
+
+/* ===============================
+    BASE STYLES
+================================ */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* ===============================
+    UTILITIES
+================================ */
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent via-[hsl(var(--gradient-mid))] to-[hsl(var(--teal))]
+           bg-clip-text text-transparent;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-accent/10 via-[hsl(var(--gradient-mid))]/5 to-[hsl(var(--teal))]/10;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+}
+
+/* ===============================
+    DYNAMIC PARTICLE ANIMATIONS
+================================ */
+
+.particle-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute !important;
+  bottom: -20px !important; /* Start slightly off-screen */
+  border-radius: 75% !important;
+  animation: revolve linear infinite !important;
+  will-change: transform;
+  display: block !important;
+}
+
+/* Force visibility for Light Mode */
+:root:not(.dark) .particle {
+  background-color:brown !important;
+  box-shadow: 0 0 10px hsl(var(--accent) / 0.3) !important;
+}
+
+/* Force visibility for Dark Mode */
+.dark .particle {
+  background-color: rgb(6, 249, 22) !important;
+  box-shadow: 0 0 12px 2px rgba(2, 236, 52, 0.8) !important;
+  animation: revolve linear infinite, twinkle 3s ease-in-out infinite !important;
+}
+
+@keyframes revolve {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-40vh) translateX(30px); }
+  100% { transform: translateY(-110vh) translateX(-20px); }
+}
+
+/* The Revolving & Drifting Path */
+@keyframes revolve {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(40px, -60px) rotate(120deg);
+  }
+  66% {
+    transform: translate(-30px, -120px) rotate(240deg);
+  }
+  100% {
+    transform: translate(0, -180px) rotate(360deg);
+  }
+}
+
+/* Twinkling for Dark Mode Stars */
+@keyframes twinkle {
+  0%, 100% { 
+    opacity: 0.2; 
+    transform: scale(0.7); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.1); 
+  }
+}
