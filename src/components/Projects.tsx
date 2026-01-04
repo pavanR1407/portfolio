@@ -15,7 +15,7 @@ export const Projects = () => {
       title: "Spectrum-Sense",
       description: "Spectrum Sense is a sleek, interactive color sequence memory game that challenges players to observe, remember, and repeat evolving color patterns..",
       image: project1,
-      technologies: ["React", "vite", "tailwindCSS", "Shadcn UI"],
+      technologies: ["typescript", "vite", "tailwindCSS", "Shadcn UI"],
       liveUrl: "https://spectrummemo.netlify.app",
       githubUrl: "https://github.com/pavanR1407/Spectrum-Sense.git",
     },
@@ -27,7 +27,7 @@ export const Projects = () => {
       liveUrl: "https://krushifarm.netlify.app/",
       githubUrl: "https://github.com/pavanR1407/Krishi-AI.git",
     },
-    {
+    /*{
       title: "AI Content Generator",
       description: "Machine learning powered content creation tool with natural language processing and automated optimization.",
       image: project3,
@@ -42,7 +42,7 @@ export const Projects = () => {
       technologies: ["TypeScript", "VS Code API", "Node.js"],
       liveUrl: "#",
       githubUrl: "#",
-    },
+    },*/
   ];
 
   return (
