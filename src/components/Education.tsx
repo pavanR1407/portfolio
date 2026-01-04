@@ -10,7 +10,7 @@ export const Education = () => {
       institution: "P M C TECH",
       location: "Hosur, Tamilnadu",
       duration: "2022 - 2026",
-      gpa: "7.9/10",
+      Cgpa: "7.9/10",
       highlights: [
         "Maintains an industrial visit for CSBS dept",
         "Lead Organizer - Innosync club for CSBS dept",
