@@ -46,7 +46,7 @@ export const Hero = () => {
           transition={{ delay: 0.2 }}
           className="text-5xl md:text-7xl font-display font-bold mb-6"
         >
-          Hi, I'm <span className="gradient-text">PAVAN KUMAR</span>
+          Hi, I'm <span className="gradient-text">PAVAN </span>
         </motion.h1>
 
         <motion.p
