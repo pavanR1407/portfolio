@@ -5,7 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import project1 from "@/assets/project-1.png";
 import project2 from "@/assets/project-2.png";
-import project3 from "@/assets/project-3.jpg";
+import project3 from "@/assets/project-3.png";
 import project4 from "@/assets/project-4.jpg";
 import { Domain } from "node:domain";
 
@@ -27,15 +27,14 @@ export const Projects = () => {
       liveUrl: "https://krushifarm.netlify.app/",
       githubUrl: "https://github.com/pavanR1407/Krishi-AI.git",
     },
-    /*{
-      title: "AI Content Generator",
-      description: "Machine learning powered content creation tool with natural language processing and automated optimization.",
-      image: project3,
-      technologies: ["Python", "TensorFlow", "FastAPI", "React"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
     {
+      title: "RiskAssess -Security & Risk Management",
+      description: "Identifies potential security threats and proactively mitigates attacks through continuous monitoring, analysis, and preventive controls",
+      technologies: ["Python", "TensorFlow", "OWASP", "IDS / IPS"],
+      liveUrl: "",
+      githubUrl: "https://github.com/pavanR1407/Risk--Asess",
+    },
+    /*{
       title: "Developer Tools Suite",
       description: "Comprehensive IDE extension package with code snippets, debugging tools, and productivity enhancements.",
       image: project4,
