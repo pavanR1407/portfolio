@@ -10,7 +10,7 @@ export const Education = () => {
       institution: "P M C TECH",
       location: "Hosur, Tamilnadu",
       duration: "2022 - 2026",
-      Cgpa: "7.9/10",
+      CGPA: "7.9/10",
       highlights: [
         "Maintains an industrial visit for CSBS dept",
         "Lead Organizer - Innosync club for CSBS dept",
@@ -66,7 +66,7 @@ export const Education = () => {
                       </div>
                     </div>
                   </div>
-                  <Badge className="bg-accent text-accent-foreground">GPA: {edu.gpa}</Badge>
+                  <Badge className="bg-accent text-accent-foreground">CGPA: {edu.CGPA}</Badge>
                 </div>
 
                 <div>
